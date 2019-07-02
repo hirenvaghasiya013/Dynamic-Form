@@ -1,0 +1,30 @@
+<div [formGroup]="experienceForm">
+  <div class="form-group col-xs-6">
+    <label>Past Experience(Months)</label>
+    <input type="text" class="form-control" formControlName="pastexperience">
+    <small [hidden]="experienceForm.controls.pastexperience.valid" class="text-danger">
+      Past Experience is required
+    </small>
+  </div>
+  <div class="form-group col-xs-6">
+    <label>Company Name</label>
+    <input type="text" class="form-control" formControlName="companyname">
+    <small [hidden]="experienceForm.controls.companyname.valid" class="text-danger">
+      Company Name is required
+    </small>
+  </div>
+  <div class="form-group col-xs-6">
+    <label>Total Experience(Years)</label>
+    <input type="text" class="form-control" formControlName="totalexperience">
+    <small [hidden]="experienceForm.controls.totalexperience.valid" class="text-danger">
+      Total Experience is required
+    </small>
+  </div>
+  <div class="form-group col-xs-6">
+    <label>Role Name</label>
+    <input type="text" class="form-control" formControlName="rolename">
+    <small [hidden]="experienceForm.controls.rolename.valid" class="text-danger">
+      Role Name is required
+    </small>
+  </div>
+</div>

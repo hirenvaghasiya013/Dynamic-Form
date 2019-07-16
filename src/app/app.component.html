@@ -14,10 +14,10 @@
         </div>
         <!--addresses-->
         <div formArrayName="expdetail">
-          <div *ngFor="let experience of myForm.controls.expdetail.controls; let i=index" class="panel panel-default">
+          <div *ngFor="let experience of myForm.get('expdetail')['controls']; let i=index" class="panel panel-default">
             <div class="panel-heading">
               <span>Experience {{i + 1}}</span>
-              <span class="glyphicon glyphicon-remove pull-right" *ngIf="myForm.controls.expdetail.controls.length > 1" (click)="removeExperience(i)"></span>
+              <span class="glyphicon glyphicon-remove pull-right" *ngIf="myForm.get('expdetail').length > 1" (click)="removeExperience(i)"></span>
             </div>
             <div class="panel-body" [formGroupName]="i">
               <app-address [group]="myForm.controls.expdetail.controls[i]"></app-address>

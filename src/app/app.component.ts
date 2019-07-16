@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
   }
 
   addExperience() {
-    const control = <FormArray>this.myForm.controls['expdetail'];
+    const control = <FormArray>this.myForm.get('expdetail');
     const addrCtrl = this.initExperience();
 
     control.push(addrCtrl);
@@ -48,11 +48,11 @@ export class AppComponent implements OnInit {
   }
 
   removeExperience(i: number) {
-    const control = <FormArray>this.myForm.controls['expdetail'];
+    const control = <FormArray>this.myForm.get('expdetail');
     control.removeAt(i);
   }
 
-  save(model: employee) {
+  save(model) {
     console.log(model);
   }
 
